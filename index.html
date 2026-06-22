@@ -1,24 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grow a Garden 2 Stock & Weather Predictor</title>
-    <meta name="description" content="Live Grow a Garden seed and gear shop stock predictor. See exactly what restocks next and when, with a live countdown for every item.">
+    <meta name="description"
+        content="Live Grow a Garden seed and gear shop stock predictor. See exactly what restocks next and when, with a live countdown for every item.">
     <meta name="theme-color" content="#10b981">
-    
+
     <!-- Modern Premium Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
-    
+
     <!-- Icon -->
     <link rel="icon" type="image/png" href="logo_raccoon.png">
     <link rel="shortcut icon" href="logo_raccoon.png">
 </head>
+
 <body>
     <!-- Day/Night Sky Background Container -->
     <div class="sky" data-sky="" aria-hidden="true">
@@ -41,16 +46,19 @@
     <!-- Main Container -->
     <main class="app-container">
         <!-- Floating GitHub Link -->
-        <a href="https://github.com/jcgaming-official/GAG-2-Predictor" target="_blank" rel="noopener noreferrer" class="github-link-btn" aria-label="View on GitHub">
+        <a href="https://github.com/jcgaming-official/GAG-2-Predictor" target="_blank" rel="noopener noreferrer"
+            class="github-link-btn" aria-label="View on GitHub">
             <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
-                <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/>
+                <path
+                    d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z" />
             </svg>
             <span>GitHub</span>
         </a>
 
         <!-- Floating Info Button -->
         <button id="infoBtn" class="info-link-btn" aria-label="View Info">
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
                 <circle cx="12" cy="12" r="10"></circle>
                 <line x1="12" y1="16" x2="12" y2="12"></line>
                 <line x1="12" y1="8" x2="12.01" y2="8"></line>
@@ -84,8 +92,10 @@
                     <div class="status-icon-wrapper">
                         <!-- Seed Icon -->
                         <svg id="leafIcon" class="icon-svg" width="32" height="32" viewBox="0 0 24 24" fill="none">
-                            <path d="M5 19c0-7 5-13 14-14 0 9-6 14-14 14z" fill="var(--active-color, #10b981)" stroke="var(--border-color, rgba(16, 185, 129, 0.4))" stroke-width="1.6"/>
-                            <path d="M6 18C9 14 13 11 17 9" stroke="var(--border-color, rgba(16, 185, 129, 0.4))" stroke-width="1.4" stroke-linecap="round"/>
+                            <path d="M5 19c0-7 5-13 14-14 0 9-6 14-14 14z" fill="var(--active-color, #10b981)"
+                                stroke="var(--border-color, rgba(16, 185, 129, 0.4))" stroke-width="1.6" />
+                            <path d="M6 18C9 14 13 11 17 9" stroke="var(--border-color, rgba(16, 185, 129, 0.4))"
+                                stroke-width="1.4" stroke-linecap="round" />
                         </svg>
                         <!-- Gear / Weather Image Icon -->
                         <img id="gearIcon" class="icon-img" width="32" height="32" style="display:none;" alt="Icon">
@@ -113,7 +123,8 @@
             <!-- Console Footer Controls (Only shown for Seeds & Gears) -->
             <div id="consoleFooterControls" class="console-footer-controls hidden">
                 <!-- Seed Restock Trigger Chip (Only shown on Seeds tab) -->
-                <button class="srk hidden" id="restockTriggerBtn" type="button" aria-haspopup="dialog" aria-label="Open seed restock tracker">
+                <button class="srk hidden" id="restockTriggerBtn" type="button" aria-haspopup="dialog"
+                    aria-label="Open seed restock tracker">
                     <span class="srk__icon" aria-hidden="true">🌱</span>
                     <span class="srk__text">
                         <span class="srk__label">Seed Restock History</span>
@@ -141,7 +152,7 @@
         <!-- Grid Predictor Outputs -->
         <section class="grid-section">
             <div id="rows" class="cards-grid"></div>
-            
+
             <!-- Empty State -->
             <div id="empty" class="empty-state hidden">
                 <div class="empty-icon">📂</div>
@@ -156,7 +167,8 @@
             <div class="prp__head">
                 <span class="prp__paw" aria-hidden="true">🐾</span>
                 <h2 class="prp__title">Rarest Pets</h2>
-                <p class="prp__sub">The rarest pets that exist right now — including <b>Rainbow</b>, <b>Big</b> and <b>Mega</b> — ranked out of ~30M gardeners.</p>
+                <p class="prp__sub">The rarest pets that exist right now — including <b>Rainbow</b>, <b>Big</b> and
+                    <b>Mega</b> — ranked out of ~30M gardeners.</p>
             </div>
 
             <!-- Filter Buttons -->
@@ -175,13 +187,15 @@
             </div>
 
             <!-- Footnote -->
-            <p class="prp__foot">“1 in N” = out of ~30M gardeners, roughly how many you'd sift through to find one. Figures are rounded and refresh as live data comes in.</p>
+            <p class="prp__foot">“1 in N” = out of ~30M gardeners, roughly how many you'd sift through to find one.
+                Figures are rounded and refresh as live data comes in.</p>
         </section>
 
         <!-- Weather Schedule Warning / Server Note -->
         <section id="weatherNote" class="weather-note hidden">
             <div class="note-badge">Server Synchronized</div>
-            <p class="note-desc">Predictions assume standard cycle schedules. Random server events (such as Goldmoon, Rainbow Moon, or Rainbow) are force-triggered by host servers and cannot be forecast in advance.</p>
+            <p class="note-desc">Predictions assume standard cycle schedules. Random server events (such as Lightning,
+                Rain, Snowfall, etc.) are force-triggered by host servers and cannot be forecast in advance.</p>
         </section>
     </main>
 
@@ -204,7 +218,8 @@
                     <span class="srm__sprout" aria-hidden="true">🌱</span> Seed Restock History
                 </h2>
                 <p class="srm__sub">
-                    Next restock in <strong id="restockNextCountdown">0:00</strong> <span class="srm__sub-dim">• time since each rare seed last appeared</span>
+                    Next restock in <strong id="restockNextCountdown">0:00</strong> <span class="srm__sub-dim">• time
+                        since each rare seed last appeared</span>
                 </p>
             </header>
             <ul class="srm__list" id="restockList"></ul>
@@ -232,19 +247,26 @@
             <ul class="srm__list info-modal-list">
                 <li class="info-modal-item">
                     <span class="info-modal-bullet">•</span>
-                    <span class="info-modal-text">Weather forecasts may vary by server and are approximately <strong>85%</strong> accurate.</span>
+                    <span class="info-modal-text">Weather forecasts may vary by server and are approximately
+                        <strong>85%</strong> accurate.</span>
                 </li>
                 <li class="info-modal-item">
                     <span class="info-modal-bullet">•</span>
-                    <span class="info-modal-text">Gear predictions may be inaccurate, especially for the <strong>Super Watering Can</strong>.</span>
+                    <span class="info-modal-text">Gear predictions may be inaccurate, especially for the <strong>Super
+                            Watering Can</strong>.</span>
                 </li>
                 <li class="info-modal-item">
                     <span class="info-modal-bullet">•</span>
-                    <span class="info-modal-text">Predictions may break during updates or when some servers are running a newer version than others without a full restart.</span>
+                    <span class="info-modal-text">Predictions may break during updates or when some servers are running
+                        a newer version than others without a full restart.</span>
                 </li>
                 <li class="info-modal-item">
                     <span class="info-modal-bullet">•</span>
-                    <span class="info-modal-text">If all stock predictions show no restock or weather data is missing, the predictor may need to be updated to the latest data. You can request a predictor update by visiting <a href="https://github.com/jcgaming-official/GAG-2-Predictor" target="_blank" rel="noopener noreferrer" style="color: var(--active-color, #10b981); text-decoration: underline;">GitHub</a>.</span>
+                    <span class="info-modal-text">If all stock predictions show no restock or weather data is missing,
+                        the predictor may need to be updated to the latest data. You can request a predictor update by
+                        visiting <a href="https://github.com/jcgaming-official/GAG-2-Predictor" target="_blank"
+                            rel="noopener noreferrer"
+                            style="color: var(--active-color, #10b981); text-decoration: underline;">GitHub</a>.</span>
                 </li>
             </ul>
             <p class="srm__foot">Accuracy based on typical server behavior.</p>
@@ -258,4 +280,5 @@
     <script src="restock.js"></script>
     <script src="sky-sync.js"></script>
 </body>
+
 </html>
