@@ -409,10 +409,23 @@ body {
     .console-tabs {
         overflow-x: auto;
         flex-wrap: nowrap;
-        scrollbar-width: none; /* Hide scrollbar in Firefox */
+        scrollbar-width: thin;
+        scrollbar-color: rgba(120, 120, 120, 0.35) transparent;
+        padding-bottom: 0.5rem;
     }
     .console-tabs::-webkit-scrollbar {
-        display: none; /* Hide scrollbar in Chrome/Safari */
+        height: 4px;
+        display: block;
+    }
+    .console-tabs::-webkit-scrollbar-track {
+        background: transparent;
+    }
+    .console-tabs::-webkit-scrollbar-thumb {
+        background: rgba(120, 120, 120, 0.35);
+        border-radius: 10px;
+    }
+    .console-tabs::-webkit-scrollbar-thumb:hover {
+        background: rgba(120, 120, 120, 0.55);
     }
     .tab-btn {
         flex: 0 0 auto;
