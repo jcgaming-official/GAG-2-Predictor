@@ -399,14 +399,18 @@ body {
         font-size: 0.875rem;
     }
 }
-@media (max-width: 480px) {
+@media (max-width: 520px) {
     .hero-title {
         font-size: 1.85rem;
     }
     .header-logo-img {
         height: 48px;
     }
+    .console-tabs {
+        flex-wrap: wrap;
+    }
     .tab-btn {
+        flex: 1 0 calc(50% - 0.25rem);
         font-size: 0.8rem;
         padding: 0.65rem 0.5rem;
     }
@@ -505,7 +509,7 @@ html[data-ui=dark] .github-link-btn:hover {
 
 .tab-btn {
     flex: 1;
-    border: none;
+    border: 1px solid transparent;
     background: transparent;
     color: var(--text-secondary);
     font-family: 'Plus Jakarta Sans', sans-serif;
@@ -525,25 +529,25 @@ html[data-ui=dark] .github-link-btn:hover {
 #tabSeeds.active {
     background: var(--color-seeds-glow);
     color: var(--color-seeds);
-    border: 1px solid var(--color-seeds-border);
+    border-color: var(--color-seeds-border);
     box-shadow: inset 0 0 12px var(--color-seeds-glow);
 }
 #tabGears.active {
     background: var(--color-gears-glow);
     color: var(--color-gears);
-    border: 1px solid var(--color-gears-border);
+    border-color: var(--color-gears-border);
     box-shadow: inset 0 0 12px var(--color-gears-glow);
 }
 #tabWeather.active {
     background: var(--color-weather-glow);
     color: var(--color-weather);
-    border: 1px solid var(--color-weather-border);
+    border-color: var(--color-weather-border);
     box-shadow: inset 0 0 12px var(--color-weather-glow);
 }
 #tabPets.active {
     background: var(--color-seeds-glow);
     color: var(--color-seeds);
-    border: 1px solid var(--color-seeds-border);
+    border-color: var(--color-seeds-border);
     box-shadow: inset 0 0 12px var(--color-seeds-glow);
 }
 
