@@ -152,3 +152,55 @@ window.tickGlobal = function() {
 if (typeof window.updateSkyBackground === 'function') {
     window.updateSkyBackground();
 }
+
+// --------------------------------------------------------------------------
+// INFO MODAL TOGGLE & BINDINGS
+// --------------------------------------------------------------------------
+(function() {
+    let infoModalOpen = false;
+
+    function openInfoModal() {
+        const modal = document.getElementById('infoModal');
+        if (modal) {
+            modal.classList.remove('hidden');
+            document.documentElement.classList.add('srm-modal-open');
+            infoModalOpen = true;
+        }
+    }
+
+    function closeInfoModal() {
+        const modal = document.getElementById('infoModal');
+        if (modal) {
+            modal.classList.add('hidden');
+            
+            // Only remove srm-modal-open class if restock modal is also closed/hidden
+            const restockModal = document.getElementById('restockModal');
+            const restockOpen = restockModal && !restockModal.classList.contains('hidden');
+            if (!restockOpen) {
+                document.documentElement.classList.remove('srm-modal-open');
+            }
+            infoModalOpen = false;
+        }
+    }
+
+    const infoBtn = document.getElementById('infoBtn');
+    if (infoBtn) {
+        infoBtn.onclick = openInfoModal;
+    }
+
+    const closeBtn = document.getElementById('infoModalCloseBtn');
+    if (closeBtn) {
+        closeBtn.onclick = closeInfoModal;
+    }
+
+    const backdrop = document.getElementById('infoModalCloseBackdrop');
+    if (backdrop) {
+        backdrop.onclick = closeInfoModal;
+    }
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && infoModalOpen) {
+            closeInfoModal();
+        }
+    });
+})();

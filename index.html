@@ -48,6 +48,16 @@
             <span>GitHub</span>
         </a>
 
+        <!-- Floating Info Button -->
+        <button id="infoBtn" class="info-link-btn" aria-label="View Info">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="16" x2="12" y2="12"></line>
+                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+            </svg>
+            <span>Info</span>
+        </button>
+
         <!-- Hero Section -->
         <section class="hero-section">
             <h1 class="hero-title logo-header">
@@ -199,6 +209,45 @@
             </header>
             <ul class="srm__list" id="restockList"></ul>
             <p class="srm__foot">Predicted from the in-game restock cycle. Updates every 5 minutes.</p>
+        </div>
+    </div>
+
+    <!-- Info Modal -->
+    <div class="srm hidden" id="infoModal">
+        <div class="srm__backdrop" id="infoModalCloseBackdrop"></div>
+        <div class="srm__panel" role="dialog" aria-modal="true" aria-label="Information">
+            <button class="srm__close" id="infoModalCloseBtn" type="button" aria-label="Close">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round">
+                    <path d="M6 6l12 12M18 6L6 18"></path>
+                </svg>
+            </button>
+            <header class="srm__head">
+                <h2 class="srm__title">
+                    <span class="srm__sprout" aria-hidden="true">ℹ️</span> System Information
+                </h2>
+                <p class="srm__sub">
+                    Important details about predictability & logic rules
+                </p>
+            </header>
+            <ul class="srm__list info-modal-list">
+                <li class="info-modal-item">
+                    <span class="info-modal-bullet">•</span>
+                    <span class="info-modal-text">Weather forecasts may vary by server and are approximately <strong>85%</strong> accurate.</span>
+                </li>
+                <li class="info-modal-item">
+                    <span class="info-modal-bullet">•</span>
+                    <span class="info-modal-text">Gear predictions may be inaccurate, especially for the <strong>Super Watering Can</strong>.</span>
+                </li>
+                <li class="info-modal-item">
+                    <span class="info-modal-bullet">•</span>
+                    <span class="info-modal-text">Predictions may break during updates or when some servers are running a newer version than others without a full restart.</span>
+                </li>
+                <li class="info-modal-item">
+                    <span class="info-modal-bullet">•</span>
+                    <span class="info-modal-text">If all stock predictions show no restock or weather data is missing, the predictor may need to be updated to the latest data. You can request a predictor update by visiting <a href="https://github.com/jcgaming-official/GAG-2-Predictor" target="_blank" rel="noopener noreferrer" style="color: var(--active-color, #10b981); text-decoration: underline;">GitHub</a>.</span>
+                </li>
+            </ul>
+            <p class="srm__foot">Accuracy based on typical server behavior.</p>
         </div>
     </div>
 
